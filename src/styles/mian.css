@@ -1,4 +1,4 @@
-@layer theme, base, animation, utilities;
+@layer theme, base, animation, utilities, global;
 
 @import "./theme.css" layer(theme);
 
@@ -7,3 +7,4 @@
 @import "./animation.css" layer(animation);
 
 @import "./common/_a11y.css" layer(utilities);
+@import "./global.css" layer(global);
