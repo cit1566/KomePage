@@ -1,10 +1,11 @@
 import { useState } from "react";
 import styles from "./header.module.css";
+import { NavLink } from "react-router-dom";
 
-const navArray: { href: string; label: string }[] = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/diary", label: "Diary" },
+const navArray: { key: number; href: string; label: string }[] = [
+  { key: 1, href: "/", label: "Home" },
+  { key: 2, href: "/about", label: "About" },
+  { key: 3, href: "/diary", label: "Diary" },
 ];
 
 export default function Header() {
@@ -12,13 +13,26 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.header_box}>
-        <span>KomDaGe</span>
+        <span className={styles.header_logo}>
+          <b className={styles.header_logo_k}>K</b>ome
+          <b className={styles.header_logo_d}>D</b>a
+          <b className={styles.header_logo_g}>G</b>e
+        </span>
         <nav className={styles.header_nav}>
-          {navArray.map(({ href, label }) => (
-            <a href={href}>{label}</a>
+          {navArray.map(({ key, href, label }) => (
+            <NavLink
+              key={key}
+              to={href}
+              className={({ isActive }) =>
+                `${styles.nav_link} ${isActive ? styles.active : ""}`
+              }
+            >
+              {label}
+            </NavLink>
           ))}
         </nav>
         <button
+          className={styles.theme_button}
           onClick={() => setTheme(!Theme)}
           type="button"
           aria-label="테마 전환"
@@ -26,8 +40,8 @@ export default function Header() {
           {Theme ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="16"
+              height="16"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -49,8 +63,8 @@ export default function Header() {
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="16"
+              height="16"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"

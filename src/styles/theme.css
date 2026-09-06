@@ -38,6 +38,25 @@
   --base-red-600: #f53232;
 
   --base-yellow: #ffdc2e;
+  /* --------------------------------------- */
+  --color-background: #f6f2ec;
+  --color-foreground: #1c1a17;
+  --color-card: #ede9e2;
+  --color-card-foreground: #1c1a17;
+  --color-primary: #1c1a17;
+  --color-primary-foreground: #f6f2ec;
+  --color-secondary: #eee9e1;
+  --color-secondary-foreground: #5a5650;
+  --color-muted: #e8e3da;
+  --color-muted-foreground: #8a857e;
+  --color-accent: #c8b99a;
+  --color-accent-foreground: #1c1a17;
+  --color-border: #ddd8cf;
+  --color-ring: #1c1a17;
+  --radius: 2px;
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  /* ---------------------------------------- */
 
   /* Overlay/Backdrop Base */
   --base-backdrop-gray: rgba(110, 111, 110, 0.34); /* #6e6f6e56 */

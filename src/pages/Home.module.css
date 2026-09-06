@@ -1,0 +1,240 @@
+.home_container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.home_intro {
+  width: 100%;
+  display: flex;
+  gap: 55px;
+  padding: 80px 0 100px;
+  flex-wrap: wrap;
+}
+
+.discription {
+  flex: 1 1 500px;
+  min-width: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 30px;
+  flex-shrink: 1;
+}
+
+.title_box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  order: 2;
+  font-size: 3.6rem;
+  font-weight: bold;
+  font-family: "Playfair Display", "serif";
+  color: var(--color-primary);
+  padding: 0;
+  margin: 0;
+}
+
+.greeting {
+  order: 1;
+
+  font-size: 0.9rem;
+  color: var(--color-muted-foreground);
+  margin: 0 0 8px;
+}
+
+.idntt {
+  /* order: 3; */
+  font-size: 0.8rem;
+  color: var(--color-secondary-foreground);
+}
+
+.about_link {
+  background-color: var(--color-primary);
+  width: 159px;
+  height: 55px;
+  color: var(--color-background);
+  /* order: 4; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  gap: 10px;
+}
+
+.discription_image {
+  flex: 1 1 500px;
+  min-width: 0;
+  max-width: 580px;
+  flex-shrink: 2;
+}
+
+.discription_image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1118px) {
+  .home_intro {
+    flex-direction: column;
+  }
+
+  .discription,
+  .discription_image {
+    width: 100%;
+    max-width: none;
+    flex: none;
+  }
+}
+
+/* Recent Diaries */
+.recent_diaries {
+  padding: 70px 0 100px;
+  width: 100%;
+  height: 100%;
+}
+
+.recent_diaries_title_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 10px;
+  height: 100%;
+  max-height: 85px;
+}
+
+.recent_diaries_title {
+  h2 {
+    font-family: "Playfair Display", "serif";
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: var(--color-foreground);
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: var(--color-muted-foreground);
+    /* margin: 5px 0 0; */
+  }
+}
+
+.recent_diaries_toDiary {
+  height: 75px;
+
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.recent_diaries_toDiary_link {
+  min-width: 100%;
+  color: var(--color-muted-foreground);
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7.5px;
+  transition: color ease-in 0.1s;
+}
+.recent_diaries_toDiary_link:hover {
+  color: var(--color-primary);
+}
+
+.article_box {
+  margin-top: 40px;
+}
+
+.recent_diaries_detail_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 25px;
+  /* background: green; */
+  padding: 30px 0;
+  border-bottom: 1px solid var(--color-border);
+
+  .recent_diaries_detail_box_img {
+    max-width: 90px;
+    max-height: 68px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .recent_diaries_detail_box_script {
+    width: 100%;
+
+    .script_date {
+      color: var(--color-muted-foreground);
+      font-size: 0.8rem;
+      font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+      margin: 0 0 5px;
+    }
+
+    .script_title {
+      color: var(--color-accent-foreground);
+      font-family: "Playfair Display", serif;
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin: 0 0 5px;
+    }
+
+    .script_excerpt {
+      color: var(--color-muted-foreground);
+      font-size: 0.9rem;
+      /* margin: 0 0 5px; */
+    }
+  }
+
+  .recent_diaries_detail_box_arrow {
+    color: var(--color-muted-foreground);
+  }
+}
+
+.border_none {
+  border: none !important;
+}
+
+.quote {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    width: 100%;
+    color: var(--color-accent);
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    margin: 0 0 20px;
+    text-align: center;
+  }
+
+  blockquote {
+    width: 100%;
+    color: var(--color-primary);
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 0 25px;
+  }
+
+  cite {
+    color: var(--color-muted-foreground);
+    font-style: normal;
+    font-family: Inter, sans-serif;
+    font-size: 0.8rem;
+  }
+}
