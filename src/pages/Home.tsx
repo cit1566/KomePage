@@ -122,27 +122,29 @@ export default function Home() {
                 <div className={styles.recent_diaries_detail_box_img}>
                   <img src={img} alt={alt} />
                 </div>
-                <div className={styles.recent_diaries_detail_box_script}>
-                  <p className={styles.script_date}>{date}</p>
-                  <h3 className={styles.script_title}>{title}</h3>
-                  <p className={styles.script_excerpt}>{excerpt}</p>
-                </div>
-                <div className={styles.recent_diaries_detail_box_arrow}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-arrow-right"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
+                <div className={styles.recent_diaries_inner_box}>
+                  <div className={styles.recent_diaries_detail_box_script}>
+                    <p className={styles.script_date}>{date}</p>
+                    <h3 className={styles.script_title}>{title}</h3>
+                    <p className={styles.script_excerpt}>{excerpt}</p>
+                  </div>
+                  <div className={styles.recent_diaries_detail_box_arrow}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-arrow-right"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </div>
                 </div>
               </article>
             );
@@ -150,8 +152,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/*  */}
       <CenterLine></CenterLine>
+
       {/* 인용문 */}
       <section className={styles.quote}>
         <div>"</div>
