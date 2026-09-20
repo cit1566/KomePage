@@ -117,7 +117,7 @@ export default function Home() {
             return (
               <article
                 className={`${styles.recent_diaries_detail_box} ${lastIndex ? styles.border_none : ""}`}
-                id={`diary_${id}`}
+                key={`diary_${id}`}
               >
                 <div className={styles.recent_diaries_detail_box_img}>
                   <img src={img} alt={alt} />
