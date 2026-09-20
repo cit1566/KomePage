@@ -51,9 +51,13 @@
   --color-muted-foreground: #8a857e;
   --color-accent: #c8b99a;
   --color-accent-foreground: #1c1a17;
+  --color-quote-background: #ede9e2;
   --color-border: #ddd8cf;
   --color-ring: #1c1a17;
+  --color-hover: #2e2b26;
+
   --radius: 2px;
+  --radius-md: 5px;
   --font-display: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
   /* ---------------------------------------- */
