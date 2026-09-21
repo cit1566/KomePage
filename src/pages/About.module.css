@@ -1,0 +1,358 @@
+.about {
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.about_section {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 100%;
+  padding: 80px 0 100px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Description
+========================= */
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.description h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  line-height: 1.2;
+}
+
+.script {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #5a5650;
+  font-size: 15px;
+  line-height: 1.625;
+}
+
+.script p {
+  margin: 0;
+}
+
+/* =========================
+   Image
+========================= */
+
+.image_box {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: #ede9e2;
+  box-sizing: border-box;
+}
+
+.image_box img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 30%;
+
+  border-radius: 10px;
+}
+
+/* -------- Who am I ----------- */
+
+.whoami {
+  max-width: 1220px;
+  margin: 0 auto;
+  font-family: var(--font-display);
+  color: var(--color-foreground);
+  padding: 80px 0;
+}
+
+.whoami_title {
+  font-weight: 700;
+  font-size: 37.5px;
+  margin: 0 0 50px;
+}
+
+.whoami_inner {
+  display: grid;
+  gap: 40px;
+}
+
+.whoami_inner_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 15px;
+}
+
+.whoami_inner_icon {
+  max-height: 22px;
+  color: var(--color-muted-foreground);
+
+  & svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.whoami_inner_title {
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  font-size: 17.5px;
+  font-weight: 600;
+}
+
+.whoami_inner_des {
+  color: var(--color-muted-foreground);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ------------ About KomeDaGe ---------------- */
+.komedage {
+  padding: 80px 0;
+}
+
+.komedage_title {
+  font-family: var(--font-display);
+  font-size: 37.5px;
+  color: var(--color-foreground);
+  margin: 0 0 40px;
+  font-weight: 700;
+}
+
+.komedage_inner {
+  display: grid;
+  gap: 40px;
+}
+
+.komedage_des {
+  color: var(--color-muted-foreground);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+}
+
+.komedage_quote {
+  width: 100%;
+  border-left: 2px solid var(--color-accent);
+  background: var(--color-quote-background);
+  color: var(--color-foreground);
+  padding: 35px;
+
+  .komedage_openQuote {
+    font-family: var(--font-display);
+    color: var(--color-accent);
+    font-size: 37.5px;
+  }
+
+  blockquote {
+    color: var(--color-foreground);
+    font-family: var(--font-display);
+    font-size: 15px;
+    margin: 0 0 20px;
+  }
+
+  cite {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    color: var(--color-muted-foreground);
+  }
+}
+
+/* -------------------- I belive -------------------- */
+.ibelive {
+  padding: 80px 0;
+}
+
+.ibelive_title {
+  font-family: var(--font-display);
+  color: var(--color-foreground);
+  font-weight: 700;
+  font-size: 37.5px;
+  margin: 0 0 50px;
+}
+
+.ibelive_inner {
+  display: grid;
+  gap: 25px;
+}
+
+.ibelive_inner_section {
+  padding: 35px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+
+  &:hover {
+    background: var(--color-muted);
+  }
+}
+
+.ibelive_inner_icon {
+  & svg {
+    width: 18px;
+    height: 18px;
+    color: var(--color-accent);
+  }
+}
+
+.ibelive_inner_des {
+  font-family: var(--font-display);
+  font-size: 15px;
+  color: var(--color-foreground);
+}
+
+/* =========================
+   Tablet
+========================= */
+@media (max-width: 768px) {
+  .image_box {
+    max-width: 800px;
+  }
+
+  .image_box img {
+    object-fit: cover;
+  }
+
+  .whoami_inner {
+    grid-template-columns: 1fr;
+  }
+
+  .komedage_inner {
+    grid-template-columns: 1fr;
+  }
+
+  .ibelive_inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .about_section {
+    gap: 80px;
+  }
+
+  .description h1 {
+    font-size: 3.5rem;
+  }
+
+  .script {
+    font-size: 16px;
+  }
+
+  .image_box {
+    max-height: 800px;
+  }
+
+  .image_box img {
+    object-fit: cover;
+  }
+
+  .whoami_inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .komedage_inner {
+    grid-template-columns: 1fr;
+  }
+
+  .ibelive_inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   Desktop
+========================= */
+
+@media (min-width: 960px) {
+  .about_section {
+    flex-direction: row;
+    align-items: center;
+
+    gap: 80px;
+  }
+
+  .description {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .image_box {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .whoami_inner {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .komedage_inner {
+    grid-template-columns: 1fr 320px;
+  }
+
+  .komedage_quote {
+    max-width: 320px;
+  }
+
+  .ibelive_inner {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* =========================
+   Large Desktop
+========================= */
+
+@media (min-width: 1200px) {
+  .about_section {
+    gap: 100px;
+  }
+
+  .description h1 {
+    font-size: 4rem;
+  }
+
+  .whoami_inner {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .komedage_inner {
+    grid-template-columns: 1fr 320px;
+  }
+
+  .komedage_quote {
+    max-width: 320px;
+  }
+
+  .ibelive_inner {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
