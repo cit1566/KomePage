@@ -1,0 +1,6 @@
+/* compo */
+.center_line {
+  box-sizing: border-box;
+  display: block;
+  border: 0.5px solid var(--color-border);
+}
