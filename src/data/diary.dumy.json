@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "date": "2026.05.20",
+    "title": "조용한 하루, 작은 생각들",
+    "excerpt": "오늘은 특별한 일이 없었지만, 그런 날도 나에게는 의미가 있다. 아침에 커피를 마시며 창밖을 바라보았다.",
+    "img": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=280&fit=crop&auto=format",
+    "alt": "초록 식물과 창가",
+    "tag": "일상"
+  },
+  {
+    "id": 2,
+    "date": "2026.05.18",
+    "title": "새로운 시작에 대하여",
+    "excerpt": "새로운 프로젝트를 시작했다. 설레기도 하고, 두렵기도 하지만 일단 오늘 할 수 있는 것부터 해보자.",
+    "img": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400&h=280&fit=crop&auto=format",
+    "alt": "도시 일출 풍경",
+    "tag": "생각"
+  },
+  {
+    "id": 3,
+    "date": "2026.05.15",
+    "title": "기록한다는 것의 의미",
+    "excerpt": "미래의 나를 위한 일이다. 미래의 내가 지금의 나에게 전하는 편지. 오늘도 한 줄을 남긴다.",
+    "img": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&h=280&fit=crop&auto=format",
+    "alt": "노트와 펜",
+    "tag": "기록"
+  },
+  {
+    "id": 4,
+    "date": "2026.05.10",
+    "title": "봄비 내리던 오후",
+    "excerpt": "창문을 두드리는 빗소리가 좋았다. 책 한 권을 읽으며 오후 내내 소파에 앉아 있었다.",
+    "img": "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?w=400&h=280&fit=crop&auto=format",
+    "alt": "빗속의 창문",
+    "tag": "일상"
+  },
+  {
+    "id": 5,
+    "date": "2026.05.05",
+    "title": "어린이날의 기억",
+    "excerpt": "어릴 때를 떠올렸다. 그때의 나는 지금의 내가 될 줄 알았을까. 아마 꽤 만족했을 것 같다.",
+    "img": "https://images.unsplash.com/photo-1474524955719-b9f87c50ce47?w=400&h=280&fit=crop&auto=format",
+    "alt": "공원 풍경",
+    "tag": "추억"
+  },
+  {
+    "id": 6,
+    "date": "2026.04.30",
+    "title": "4월의 마지막 날",
+    "excerpt": "한 달이 또 지나갔다. 빠르게 흘러가는 시간 속에서 놓치지 말아야 할 것들을 생각해 보았다.",
+    "img": "https://images.unsplash.com/photo-1490349368154-73de9c9bc37c?w=400&h=280&fit=crop&auto=format",
+    "alt": "낙엽과 가을 풍경",
+    "tag": "생각"
+  }
+]
