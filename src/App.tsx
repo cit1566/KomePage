@@ -1,25 +1,23 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Diary from "./pages/Diary";
 import Footer from "./components/Footer";
+import DiaryPage from "./pages/DiaryPage";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 
 export default function App() {
   return (
     <>
-      <BrowserRouter>
-        <Header></Header>
-        <div className={"main_wrraper"}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/diary" element={<Diary />} />
-          </Routes>
-        </div>
-        <Footer></Footer>
-      </BrowserRouter>
+      <Header />
+      <div className={"main_wrraper"}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/diary" element={<DiaryPage />} />
+        </Routes>
+      </div>
+      <Footer />
     </>
   );
 }
