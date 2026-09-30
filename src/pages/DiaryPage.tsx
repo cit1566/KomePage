@@ -1,9 +1,9 @@
 import CenterLine from "@/components/Atom/CenterLine";
 import DiaryCard from "@/components/DiaryCard";
 import DiaryData from "@/data/diary.dumy.json";
-import styles from "./Diary.module.css";
+import styles from "./DiaryPage.module.css";
 
-export default function Diary() {
+export default function DiaryPage() {
   return (
     <main className={styles.diary}>
       <section className={styles.diary_title_box}>

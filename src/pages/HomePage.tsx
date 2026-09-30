@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "./Home.module.css";
+import styles from "./HomePage.module.css";
 import CenterLine from "@/components/Atom/CenterLine";
 
 const diaries: {
@@ -37,7 +37,7 @@ const diaries: {
   },
 ];
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main className={styles.home_container}>
       {/* 소개글 - 상단 */}

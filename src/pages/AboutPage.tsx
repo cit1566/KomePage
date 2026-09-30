@@ -1,5 +1,5 @@
 import CenterLine from "@/components/Atom/CenterLine";
-import styles from "./About.module.css";
+import styles from "./AboutPage.module.css";
 import {
   BookIcon,
   PenLineIcon,
@@ -68,7 +68,7 @@ const iBeliveArr: iBeliveArrType[] = [
   },
 ];
 
-export default function About() {
+export default function AboutPage() {
   return (
     <main className={styles.about}>
       <section className={styles.about_section}>
