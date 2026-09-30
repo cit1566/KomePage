@@ -6,4 +6,5 @@ export interface Diary {
   img: string;
   alt: string;
   tag: string;
+  content: string[];
 }
