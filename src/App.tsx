@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import DiaryPage from "./pages/DiaryPage";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
+import DiaryDetailPage from "./pages/DiaryDetailPage";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/diary" element={<DiaryPage />} />
+          <Route path="/diary/:id" element={<DiaryDetailPage />} />
         </Routes>
       </div>
       <Footer />

@@ -1,13 +1,14 @@
 import type { Diary } from "@/types/Diary.type";
 import styles from "./DiaryCard.module.css";
+import { Link } from "react-router-dom";
 interface DiaryCardProps {
   diaryData: Diary;
 }
 
 export default function DiaryCard({ diaryData }: DiaryCardProps) {
   return (
-    <article className={styles.diarycard}>
-      <a href="aa">
+    <Link to={`/diary/${diaryData.id}`} state={{ diaryData }}>
+      <article className={styles.diarycard}>
         <div className={styles.diarycard_img_box}>
           <img src={diaryData.img} alt={diaryData.alt} />
         </div>
@@ -17,7 +18,7 @@ export default function DiaryCard({ diaryData }: DiaryCardProps) {
         </div>
         <h2 className={styles.diarycard_title}>{diaryData.title}</h2>
         <p className={styles.diarycard_excerpt}>{diaryData.excerpt}</p>
-      </a>
-    </article>
+      </article>
+    </Link>
   );
 }
