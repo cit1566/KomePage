@@ -38,5 +38,5 @@
 }
 
 .linkbutton_white:hover {
-  background: var(--color-hover);
+  background: var(--color-card);
 }
