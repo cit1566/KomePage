@@ -41,6 +41,7 @@
   /* --------------------------------------- */
   --color-background: #f6f2ec;
   --color-background-second: #e9e3d9;
+  --color-background-opacity: #f7f1e8c6;
   --color-foreground: #1c1a17;
   --color-card: #ede9e2;
   --color-card-foreground: #1c1a17;
@@ -57,6 +58,7 @@
   --color-border: #ddd8cf;
   --color-ring: #1c1a17;
   --color-hover: #2e2b26;
+  --color-note: #aaa49b;
 
   --radius: 2px;
   --radius-md: 5px;

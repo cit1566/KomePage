@@ -4,17 +4,18 @@ import CenterLine from "@/components/Atom/CenterLine";
 import { LeftArrow, RightArrow } from "@/components/Atom/SVG";
 import getDataForId from "@/utils/getDataForId";
 import getSearchId from "@/utils/getSearchId";
+import NotFoundPage from "./NotFoundPage";
 
 export default function DiaryDetailPage() {
   const { id } = useParams();
 
   // URL의 페이지 id 서칭
-  if (!id) return <div>ID가 존재하지 않습니다.</div>;
+  if (!id) return <NotFoundPage />;
 
   const data = getDataForId(Number(id));
 
   // URL 페이지 id에 할당된 Data 서칭
-  if (!data) return <div>Data가 존재하지 않습니다.</div>;
+  if (!data) return <NotFoundPage />;
 
   // 빈 페이지 오류 디자인 추가 필요
   return (

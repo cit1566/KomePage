@@ -184,3 +184,26 @@ export function RightArrow() {
     </svg>
   );
 }
+
+interface CompassIconProps {
+  className: string;
+}
+
+export function CompassIcon({ className }: CompassIconProps) {
+  return (
+    <svg
+      className={`not-found__illustration ${className}`}
+      viewBox="0 0 104 104"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="52" cy="52" r="43"></circle>
+      <circle cx="52" cy="52" r="4"></circle>
+      <path d="M52 19v9M52 76v9M19 52h9M76 52h9"></path>
+      <path
+        className="not-found__needle"
+        d="m63 38-7 18-15 10 7-18 15-10Z"
+      ></path>
+    </svg>
+  );
+}
