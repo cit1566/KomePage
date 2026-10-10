@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import styles from "./HomePage.module.css";
 import CenterLine from "@/components/Atom/CenterLine";
+import LinkButton from "@/components/Atom/LinkButton";
+import { RightArrow } from "@/components/Atom/SVG";
 
 const diaries: {
   id: number;
@@ -54,24 +56,14 @@ export default function HomePage() {
             <br />
             여기에 남겨 둡니다.
           </p>
-          <Link className={styles.about_link} to="/about">
-            About me
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-arrow-right"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
-          </Link>
+
+          <LinkButton
+            title="About me"
+            href="/about"
+            className={styles.about_link}
+          >
+            <RightArrow />
+          </LinkButton>
         </div>
         <div className={styles.discription_image}>
           <img
