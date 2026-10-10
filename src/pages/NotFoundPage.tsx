@@ -32,13 +32,13 @@ export default function NotFoundPage() {
             익숙한 페이지에서 다시 시작해 보세요.
           </p>
           <div className={styles.notfound_actions}>
-            <LinkButton title="홈으로 돌아가기" herf="/">
+            <LinkButton title="홈으로 돌아가기" href="/">
               <RightArrow />
             </LinkButton>
             <LinkButton
               title="일기 보러가기"
-              herf="/diary"
-              type="white"
+              href="/diary"
+              variant="white"
             ></LinkButton>
           </div>
         </div>
