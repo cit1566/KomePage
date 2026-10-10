@@ -15,6 +15,7 @@ export default function Header() {
 
   const handleNavigation = () => {
     setMenuOpen(false);
+    console.log("nav clicked!");
   };
 
   useEffect(() => {
@@ -45,11 +46,9 @@ export default function Header() {
               key={to}
               to={to}
               end={to === "/"}
-              tabIndex={menuOpen ? 0 : -1}
-              onClick={handleNavigation}
               className={({ isActive }) =>
-                `${styles.siteHeaderMobileLink}${
-                  isActive ? ` ${styles.siteHeaderMobileLinkActive}` : ""
+                `${styles.siteHeaderDesktopLink}${
+                  isActive ? ` ${styles.siteHeaderDesktopLinkActive}` : ""
                 }`
               }
             >
@@ -101,6 +100,7 @@ export default function Header() {
               to={to}
               end={to === "/"}
               tabIndex={menuOpen ? 0 : -1}
+              onClick={handleNavigation}
               className={({ isActive }) =>
                 `${styles.siteHeaderMobileLink}${
                   isActive ? ` ${styles.siteHeaderMobileLinkActive}` : ""
