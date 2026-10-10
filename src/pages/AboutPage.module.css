@@ -30,7 +30,7 @@
 
 .description h1 {
   margin: 0;
-  font-size: 3rem;
+  /* font-size: 3rem; */
   font-weight: 700;
   font-family: var(--font-display);
   line-height: 1.2;
@@ -233,6 +233,10 @@
    Tablet
 ========================= */
 @media (max-width: 768px) {
+  .description h1 {
+    font-size: 40px;
+  }
+
   .image_box {
     max-width: 800px;
   }
@@ -255,6 +259,10 @@
 }
 
 @media (min-width: 768px) {
+  .description h1 {
+    font-size: 3rem;
+  }
+
   .about_section {
     gap: 80px;
   }
