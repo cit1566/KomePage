@@ -1,82 +1,139 @@
-import { useState } from "react";
-import styles from "./header.module.css";
 import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import styles from "./Header.module.css";
+import { MoonIcon, SunIcon } from "./Atom/SVG";
 
-const navArray: { key: number; href: string; label: string }[] = [
-  { key: 1, href: "/", label: "Home" },
-  { key: 2, href: "/about", label: "About" },
-  { key: 3, href: "/diary", label: "Diary" },
+const navigation = [
+  { to: "/", label: "Home", description: "처음으로" },
+  { to: "/about", label: "About", description: "나에 대하여" },
+  { to: "/diary", label: "Diary", description: "일상의 기록" },
 ];
 
 export default function Header() {
-  const [Theme, setTheme] = useState(true);
+  const [dark, setDark] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleNavigation = () => {
+    setMenuOpen(false);
+  };
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [menuOpen]);
+
   return (
-    <header className={styles.header}>
-      <div className={styles.header_box}>
-        <span className={styles.header_logo}>
-          <b className={styles.header_logo_k}>K</b>ome
-          <b className={styles.header_logo_d}>D</b>a
-          <b className={styles.header_logo_g}>G</b>e
-        </span>
-        <nav className={styles.header_nav}>
-          {navArray.map(({ key, href, label }) => (
+    <header className={styles.siteHeader}>
+      <div className={styles.siteHeaderInner}>
+        <NavLink
+          to="/"
+          className={styles.siteHeaderLogo}
+          aria-label="KomeDaGe 홈"
+        >
+          KomeDaGe
+        </NavLink>
+
+        <nav className={styles.siteHeaderDesktopNav} aria-label="주요 메뉴">
+          {navigation.map(({ to, label }) => (
             <NavLink
-              key={key}
-              to={href}
+              key={to}
+              to={to}
+              end={to === "/"}
+              tabIndex={menuOpen ? 0 : -1}
+              onClick={handleNavigation}
               className={({ isActive }) =>
-                `${styles.nav_link} ${isActive ? styles.active : ""}`
+                `${styles.siteHeaderMobileLink}${
+                  isActive ? ` ${styles.siteHeaderMobileLinkActive}` : ""
+                }`
               }
             >
               {label}
             </NavLink>
           ))}
         </nav>
-        <button
-          className={styles.theme_button}
-          onClick={() => setTheme(!Theme)}
-          type="button"
-          aria-label="테마 전환"
+
+        <div className={styles.siteHeaderActions}>
+          <button
+            type="button"
+            onClick={() => setDark((d) => !d)}
+            className={styles.siteHeaderIconButton}
+            aria-label="테마 전환"
+          >
+            {dark ? <SunIcon /> : <MoonIcon />}
+          </button>
+
+          <button
+            type="button"
+            className={`${styles.siteHeaderMenuButton}${
+              menuOpen ? ` ${styles.siteHeaderMenuButtonOpen}` : ""
+            }`}
+            onClick={() => setMenuOpen((open) => !open)}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
+            aria-label={menuOpen ? "메뉴 닫기" : "메뉴 열기"}
+          >
+            <span />
+            <span />
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-navigation"
+        className={`${styles.siteHeaderMobilePanel}${
+          menuOpen ? ` ${styles.siteHeaderMobilePanelOpen}` : ""
+        }`}
+        aria-hidden={!menuOpen}
+      >
+        <nav
+          className={styles.siteHeaderMobileNav}
+          aria-label="모바일 주요 메뉴"
         >
-          {Theme ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-sun-icon lucide-sun"
+          {navigation.map(({ to, label, description }, index) => (
+            <NavLink
+              key={to}
+              to={to}
+              end={to === "/"}
+              tabIndex={menuOpen ? 0 : -1}
+              className={({ isActive }) =>
+                `${styles.siteHeaderMobileLink}${
+                  isActive ? ` ${styles.siteHeaderMobileLinkActive}` : ""
+                }`
+              }
             >
-              <circle cx="12" cy="12" r="4" />
-              <path d="M12 2v2" />
-              <path d="M12 20v2" />
-              <path d="m4.93 4.93 1.41 1.41" />
-              <path d="m17.66 17.66 1.41 1.41" />
-              <path d="M2 12h2" />
-              <path d="M20 12h2" />
-              <path d="m6.34 17.66-1.41 1.41" />
-              <path d="m19.07 4.93-1.41 1.41" />
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-moon-icon lucide-moon"
-            >
-              <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
-            </svg>
-          )}
-        </button>
+              <span className={styles.siteHeaderMobileIndex}>0{index + 1}</span>
+
+              <span className={styles.siteHeaderMobileLabel}>{label}</span>
+
+              <span className={styles.siteHeaderMobileDescription}>
+                {description}
+              </span>
+
+              <svg
+                className={styles.siteHeaderMobileArrow}
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </NavLink>
+          ))}
+        </nav>
+
+        <p className={styles.siteHeaderMobileNote}>
+          Thoughts, days, and little moments.
+        </p>
       </div>
     </header>
   );
