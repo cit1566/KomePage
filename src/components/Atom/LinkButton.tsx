@@ -1,33 +1,29 @@
 import { Link } from "react-router-dom";
-import styles from "./LinkButton.module.css";
 import type { ReactNode } from "react";
-type LinkButtonsProps = {
+import styles from "./LinkButton.module.css";
+
+type LinkButtonProps = {
   title: string;
-  herf: string;
-  type?: "black" | "white";
-  classProps?: string;
+  href: string;
+  variant?: "black" | "white";
+  className?: string;
   children?: ReactNode;
 };
 
-export default function LinkButtons({
+export default function LinkButton({
   title,
-  herf,
-  type = "black",
-  classProps,
+  href,
+  variant = "black",
+  className,
   children,
-}: LinkButtonsProps) {
-  if (type === "black")
-    return (
-      <Link className={`${styles.linkbutton_black} ${classProps}`} to={herf}>
-        {title}
-        {children}
-      </Link>
-    );
-  else if (type === "white")
-    return (
-      <Link className={`${styles.linkbutton_white} ${classProps}`} to={herf}>
-        {title}
-        {children}
-      </Link>
-    );
+}: LinkButtonProps) {
+  return (
+    <Link
+      to={href}
+      className={`${styles.linkbutton} ${styles[variant]} ${className ?? ""}`}
+    >
+      {title}
+      {children}
+    </Link>
+  );
 }
