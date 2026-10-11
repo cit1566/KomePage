@@ -10,8 +10,18 @@ const navigation = [
 ];
 
 export default function Header() {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) return savedTheme === "dark";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const theme = dark ? "dark" : "light";
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem("theme", theme);
+  }, [dark]);
 
   const handleNavigation = () => {
     setMenuOpen(false);

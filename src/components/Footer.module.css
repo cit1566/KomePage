@@ -1,8 +1,8 @@
 .siteFooter {
   width: 100%;
   margin-top: 5rem;
-  border-top: 1px solid #ddd8cf;
-  background-color: #f6f2ec;
+  border-top: 1px solid var(--color-border);
+  background-color: var(--background);
 }
 
 .siteFooterInner {
@@ -20,7 +20,7 @@
 }
 
 .siteFooterBrand {
-  color: #1c1a17;
+  color: var(--color-foreground);
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -45,13 +45,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #8a857e;
+  color: var(--color-muted-foreground);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .siteFooterLink:hover {
-  color: #1c1a17;
+  color: var(--color-foreground);
 }
 
 .siteFooterLinkLabel,
@@ -63,14 +63,14 @@
   grid-column: 2;
   grid-row: 1;
   margin: 0;
-  color: #8a857e;
+  color: var(--color-muted-foreground);
   font-size: 0.75rem;
   white-space: nowrap;
 }
 
 .siteFooterBrand:focus-visible,
 .siteFooterLink:focus-visible {
-  outline: 1px solid #1c1a17;
+  outline: 1px solid var(--color-ring);
   outline-offset: 3px;
 }
 
@@ -102,7 +102,7 @@
     width: 0.65rem;
     height: 0.65rem;
     margin-right: 0.2rem;
-    border: 1px solid #c8b99a;
+    border: 1px solid var(--color-accent);
     content: "";
     transform: rotate(45deg);
   }
@@ -111,7 +111,7 @@
     display: block;
     grid-area: eyebrow;
     margin-bottom: 0.65rem;
-    color: #aaa49b;
+    color: var(--color-note);
     font-size: 0.625rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -119,7 +119,7 @@
 
   .siteFooterBrand {
     grid-area: brand;
-    font-family: "Playfair Display", serif;
+    font-family: var(--font-display);
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: -0.02em;
@@ -130,8 +130,8 @@
     display: block;
     grid-area: description;
     margin: 0.75rem 0 0;
-    color: #8a857e;
-    font-family: "Playfair Display", serif;
+    color: var(--color-muted-foreground);
+    font-family: var(--font-display);
     font-size: 0.875rem;
     font-style: italic;
   }
@@ -142,21 +142,21 @@
     align-items: stretch;
     gap: 0;
     margin-top: 2rem;
-    border-top: 1px solid #ddd8cf;
+    border-top: 1px solid var(--color-border);
   }
 
   .siteFooterLink {
     justify-content: flex-start;
     min-height: 3.25rem;
-    border-bottom: 1px solid #ddd8cf;
-    color: #5a5650;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-secondary-foreground);
     font-size: 0.75rem;
     letter-spacing: 0.04em;
   }
 
   .siteFooterLinkIcon {
     margin-right: 0.75rem;
-    color: #8a857e;
+    color: var(--color-muted-foreground);
   }
 
   .siteFooterLinkLabel,
@@ -166,7 +166,7 @@
 
   .siteFooterLinkArrow {
     margin-left: auto;
-    color: #c8b99a;
+    color: var(--color-accent);
     transition: transform 0.2s ease;
   }
 

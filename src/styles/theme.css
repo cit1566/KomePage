@@ -39,26 +39,46 @@
 
   --base-yellow: #ffdc2e;
   /* --------------------------------------- */
-  --color-background: #f6f2ec;
+  color-scheme: light;
+  --background: #f6f2ec;
+  --foreground: #1c1a17;
+  --card: #ede9e2;
+  --secondary: #eee9e1;
+  --secondary-foreground: #5a5650;
+  --muted: #e8e3da;
+  --muted-foreground: #8a857e;
+  --accent: #c8b99a;
+  --border: #ddd8cf;
+  --primary-hover: #2e2b26;
+  --subtle-foreground: #aaa49b;
+  --placeholder: #c8c3ba;
+  --body-foreground: #3a3733;
+  --editor-surface: #f0ece5;
+  --header-background: rgba(246, 242, 236, 0.96);
+  --hero-overlay: rgba(246, 242, 236, 0.35);
+  --scrollbar: #c8c3ba;
+
+  --color-background: var(--background);
   --color-background-second: #e9e3d9;
   --color-background-opacity: #f7f1e8c6;
-  --color-foreground: #1c1a17;
-  --color-card: #ede9e2;
-  --color-card-foreground: #1c1a17;
-  --color-primary: #1c1a17;
-  --color-primary-foreground: #f6f2ec;
-  --color-secondary: #eee9e1;
-  --color-secondary-foreground: #5a5650;
-  --color-muted: #e8e3da;
-  --color-muted-foreground: #8a857e;
-  --color-accent: #c8b99a;
-  --color-accent-foreground: #1c1a17;
-  --color-quote-background: #ede9e2;
-  --color-text: #3a3733;
-  --color-border: #ddd8cf;
-  --color-ring: #1c1a17;
-  --color-hover: #2e2b26;
-  --color-note: #aaa49b;
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--foreground);
+  --color-primary: var(--foreground);
+  --color-primary-foreground: var(--background);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--foreground);
+  --color-quote-background: var(--card);
+  --color-text: var(--body-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--foreground);
+  --color-hover: var(--primary-hover);
+  --color-note: var(--subtle-foreground);
+  --color-placeholder: var(--placeholder);
 
   --radius: 2px;
   --radius-md: 5px;
@@ -87,7 +107,7 @@
    * Text
    * ========================= */
   --color-label: var(--base-gray-950); /* 라벨 제목 */
-  --color-placeholder: var(--base-gray-600); /* 인풋 placeholder */
+  --color-placeholder: var(--placeholder);
   --color-gray: var(--base-gray-800);
   --color-text-gray: var(--base-gray-900);
   --color-text-gray-2: var(--base-gray-700);
@@ -128,6 +148,30 @@
    * Alias (기존 변수를 유지하면서 값 연결)
    * ========================= */
   --color-gray-light-2: var(--base-gray-400);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #171613;
+  --foreground: #eee9e1;
+  --card: #24211d;
+  --secondary: #2a2722;
+  --secondary-foreground: #c7c0b5;
+  --muted: #211f1b;
+  --muted-foreground: #aaa297;
+  --accent: #c6ad7f;
+  --border: #3c3831;
+  --primary-hover: #d8cdbd;
+  --subtle-foreground: #817a70;
+  --placeholder: #6f685f;
+  --body-foreground: #d8d1c7;
+  --editor-surface: #1d1b18;
+  --header-background: rgba(23, 22, 19, 0.94);
+  --hero-overlay: rgba(23, 22, 19, 0.35);
+  --scrollbar: #4b463e;
+
+  --color-background-second: #211f1b;
+  --color-background-opacity: rgba(23, 22, 19, 0.94);
 }
 
 /* Utilities */
