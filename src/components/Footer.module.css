@@ -1,0 +1,190 @@
+.siteFooter {
+  width: 100%;
+  margin-top: 5rem;
+  border-top: 1px solid var(--color-border);
+  background-color: var(--background);
+}
+
+.siteFooterInner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  max-width: 64rem;
+  min-height: 3.5rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.siteFooterIdentity {
+  justify-self: start;
+}
+
+.siteFooterBrand {
+  color: var(--color-foreground);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.siteFooterEyebrow,
+.siteFooterDescription {
+  display: none;
+}
+
+.siteFooterLinks {
+  display: flex;
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.siteFooterLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted-foreground);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.siteFooterLink:hover {
+  color: var(--color-foreground);
+}
+
+.siteFooterLinkLabel,
+.siteFooterLinkArrow {
+  display: none;
+}
+
+.siteFooterCopyright {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  color: var(--color-muted-foreground);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.siteFooterBrand:focus-visible,
+.siteFooterLink:focus-visible {
+  outline: 1px solid var(--color-ring);
+  outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  .siteFooter {
+    margin-top: 4rem;
+  }
+
+  .siteFooterInner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+    padding: 2.5rem 1.25rem 1.5rem;
+  }
+
+  .siteFooterIdentity {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "eyebrow eyebrow"
+      "brand mark"
+      "description description";
+    align-items: center;
+  }
+
+  .siteFooterIdentity::after {
+    grid-area: mark;
+    width: 0.65rem;
+    height: 0.65rem;
+    margin-right: 0.2rem;
+    border: 1px solid var(--color-accent);
+    content: "";
+    transform: rotate(45deg);
+  }
+
+  .siteFooterEyebrow {
+    display: block;
+    grid-area: eyebrow;
+    margin-bottom: 0.65rem;
+    color: var(--color-note);
+    font-size: 0.625rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .siteFooterBrand {
+    grid-area: brand;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .siteFooterDescription {
+    display: block;
+    grid-area: description;
+    margin: 0.75rem 0 0;
+    color: var(--color-muted-foreground);
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-style: italic;
+  }
+
+  .siteFooterLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .siteFooterLink {
+    justify-content: flex-start;
+    min-height: 3.25rem;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-secondary-foreground);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+  }
+
+  .siteFooterLinkIcon {
+    margin-right: 0.75rem;
+    color: var(--color-muted-foreground);
+  }
+
+  .siteFooterLinkLabel,
+  .siteFooterLinkArrow {
+    display: block;
+  }
+
+  .siteFooterLinkArrow {
+    margin-left: auto;
+    color: var(--color-accent);
+    transition: transform 0.2s ease;
+  }
+
+  .siteFooterLink:hover .siteFooterLinkArrow {
+    transform: translateX(0.2rem);
+  }
+
+  .siteFooterCopyright {
+    margin: 1.5rem 0 0;
+    font-size: 0.6875rem;
+    line-height: 1.5;
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .siteFooterLink,
+  .siteFooterLinkArrow {
+    transition: none;
+  }
+}

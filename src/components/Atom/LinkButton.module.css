@@ -1,0 +1,37 @@
+.linkbutton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12.5px;
+
+  min-height: 55px;
+  width: 100%;
+  height: 100%;
+
+  padding: 15px 25px;
+
+  font-size: 16px;
+  text-decoration: none;
+
+  transition: background ease-in-out 0.2s;
+}
+
+/* Black */
+.black {
+  background: var(--color-primary);
+  color: var(--color-border);
+}
+
+.black:hover {
+  background: var(--color-hover);
+}
+
+/* White */
+.white {
+  border: 1px solid var(--color-border);
+  color: var(--color-border);
+}
+
+.white:hover {
+  background: var(--color-card);
+}

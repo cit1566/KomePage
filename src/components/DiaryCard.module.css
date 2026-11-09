@@ -1,0 +1,72 @@
+.diarycard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  font-family: var(--font-sans);
+}
+
+.diarycard:hover {
+  .diarycard_img_box img {
+    scale: 1.05;
+  }
+
+  .diarycard_title {
+    color: var(--color-secondary-foreground);
+  }
+}
+
+.diarycard_img_box {
+  width: 100%;
+  margin-bottom: 20px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    border-radius: var(--radius-md);
+    transition: ease-in 0.3s scale;
+  }
+}
+
+.diarycard_info {
+  height: 27px;
+  width: 100%;
+  margin: 0 0 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+}
+
+.diarycard_info_data {
+  font-family:
+    "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas",
+    "Liberation Mono", "Courier New", "monospace";
+  font-size: 15px;
+  color: var(--color-muted-foreground);
+}
+
+.diarycard_info_tag {
+  font-family: var(--font-sans);
+  color: var(--color-accent);
+  font-size: 15px;
+  padding: 2.5px 10px;
+  border: 1px solid var(--color-border);
+}
+
+.diarycard_title {
+  width: 100%;
+  font-family: var(--font-display);
+  color: var(--color-accent-foreground);
+  font-size: 22.5px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  transition: ease-in 0.2s color;
+}
+
+.diarycard_excerpt {
+  font-family: var(--font-sans);
+  color: var(--color-muted-foreground);
+  font-size: 17.5px;
+}

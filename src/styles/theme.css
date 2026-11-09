@@ -1,0 +1,219 @@
+:root {
+  /* =========================
+   * Base Colors (원본 값 유지)
+   * - 아래 Base 토큰만 "실제 색상값"을 가진다
+   * - 이후 기존 변수들은 Base 토큰을 참조한다
+   * ========================= */
+  --base-green: #1ed534;
+  --base-black: #1a1a1a;
+
+  --base-gray-50: #fdfdfd;
+  --base-gray-100: #f8f9fa;
+  --base-gray-200: #f2f2f2;
+  --base-gray-250: #eeeeee;
+  --base-gray-300: #ebebeb;
+  --base-gray-400: #e4e4e4;
+  --base-gray-500: #d0d0d0;
+  --base-gray-600: #bdbdbd;
+  --base-gray-700: #9ca3af;
+  --base-gray-800: #8c8c8c;
+  --base-gray-850: #858585;
+  --base-gray-900: #667085;
+  --base-gray-950: #535353;
+
+  --base-black-50: #f5f5f5; /* 거의 화이트 */
+  --base-black-100: #e5e5e5;
+  --base-black-200: #d4d4d4;
+  --base-black-300: #a3a3a3;
+  --base-black-400: #737373;
+  --base-black-500: #525252;
+  --base-black-600: #404040;
+  --base-black-700: #262626;
+  --base-black-800: #1f1f1f;
+  --base-black-900: #1a1a1a; /* 기존 color-black */
+
+  --base-purple: #6941c6;
+
+  --base-red-500: #ff5b5b;
+  --base-red-600: #f53232;
+
+  --base-yellow: #ffdc2e;
+  /* --------------------------------------- */
+  color-scheme: light;
+  --background: #f6f2ec;
+  --foreground: #1c1a17;
+  --card: #ede9e2;
+  --secondary: #eee9e1;
+  --secondary-foreground: #5a5650;
+  --muted: #e8e3da;
+  --muted-foreground: #8a857e;
+  --accent: #c8b99a;
+  --border: #ddd8cf;
+  --primary-hover: #2e2b26;
+  --subtle-foreground: #aaa49b;
+  --placeholder: #c8c3ba;
+  --body-foreground: #3a3733;
+  --editor-surface: #f0ece5;
+  --header-background: rgba(246, 242, 236, 0.96);
+  --hero-overlay: rgba(246, 242, 236, 0.35);
+  --scrollbar: #c8c3ba;
+
+  --color-background: var(--background);
+  --color-background-second: #e9e3d9;
+  --color-background-opacity: #f7f1e8c6;
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--foreground);
+  --color-primary: var(--foreground);
+  --color-primary-foreground: var(--background);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--foreground);
+  --color-quote-background: var(--card);
+  --color-text: var(--body-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--foreground);
+  --color-hover: var(--primary-hover);
+  --color-note: var(--subtle-foreground);
+  --color-placeholder: var(--placeholder);
+
+  --radius: 2px;
+  --radius-md: 5px;
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-JetBraints: JetBrains Mono, monospace;
+  /* ---------------------------------------- */
+
+  /* Overlay/Backdrop Base */
+  --base-backdrop-gray: rgba(110, 111, 110, 0.34); /* #6e6f6e56 */
+  --base-backdrop-green: rgba(30, 213, 51, 0.69); /* #1ed533b0 */
+
+  /* =========================
+   * Brand / Core
+   * ========================= */
+  --color-green: var(--base-green); /* 기본 초록 */
+  --color-black: var(--base-black); /* 기본 검정 */
+
+  /* =========================
+   * Background
+   * ========================= */
+  --color-gray-light: var(--base-gray-50); /* 기본 하양 */
+  --color-bg-light: var(--base-gray-100); /* 배경 하양 */
+  --color-bg-dark: var(--base-gray-200);
+  --color-bg-dark-2: var(--base-black-600);
+  /* =========================
+   * Text
+   * ========================= */
+  --color-label: var(--base-gray-950); /* 라벨 제목 */
+  --color-placeholder: var(--placeholder);
+  --color-gray: var(--base-gray-800);
+  --color-text-gray: var(--base-gray-900);
+  --color-text-gray-2: var(--base-gray-700);
+  --color-text-purple: var(--base-purple);
+  --color-text-light: var(--base-gray-50);
+  --color-text-light-2: var(--base-gray-300);
+  /* =========================
+   * Border / Divider
+   * ========================= */
+  --color-border-4: var(--base-gray-300);
+  --color-border-d0: var(--base-gray-500); /* 인풋 보더 바텀(기본) */
+  --color-border-85: var(--base-gray-850); /* 인풋 보더 바텀(입력) */
+  --color-border-red: var(--base-red-600); /* 인풋 보더 바텀(에러) */
+
+  /* =========================
+   * Status
+   * ========================= */
+  --color-red: var(--base-red-500);
+  --color-yellow: var(--base-yellow);
+
+  /* =========================
+   * Button
+   * ========================= */
+  --color-btn-gray: var(--base-gray-250); /* 버튼 회색 */
+
+  /* =========================
+   * Backdrop / Overlay
+   * ========================= */
+  --color-backdrop-gray: var(--base-backdrop-gray);
+  --color-backdrop-green: var(--base-backdrop-green);
+
+  /* =========================
+   * Spacing / Divider (기존 변수명 유지)
+   * ========================= */
+  --color-breakLine-gray: var(--base-gray-300); /* Spacing */
+
+  /* =========================
+   * Alias (기존 변수를 유지하면서 값 연결)
+   * ========================= */
+  --color-gray-light-2: var(--base-gray-400);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #171613;
+  --foreground: #eee9e1;
+  --card: #24211d;
+  --secondary: #2a2722;
+  --secondary-foreground: #c7c0b5;
+  --muted: #211f1b;
+  --muted-foreground: #aaa297;
+  --accent: #c6ad7f;
+  --border: #3c3831;
+  --primary-hover: #d8cdbd;
+  --subtle-foreground: #817a70;
+  --placeholder: #6f685f;
+  --body-foreground: #d8d1c7;
+  --editor-surface: #1d1b18;
+  --header-background: rgba(23, 22, 19, 0.94);
+  --hero-overlay: rgba(23, 22, 19, 0.35);
+  --scrollbar: #4b463e;
+
+  --color-background-second: #211f1b;
+  --color-background-opacity: rgba(23, 22, 19, 0.94);
+}
+
+/* Utilities */
+.inline-space {
+  margin-inline: var(--inline-spacing);
+}
+
+.gap-element > * + * {
+  margin-top: var(--element-gap);
+}
+
+.gap-component > * + * {
+  margin-top: var(--component-gap);
+}
+
+/* Basic text colors */
+.text-green {
+  color: var(--color-green);
+}
+
+.text-black {
+  color: var(--color-black);
+}
+
+.text-label {
+  color: var(--color-label);
+}
+
+.text-placeholder {
+  color: var(--color-placeholder);
+}
+
+.text-gray {
+  color: var(--color-gray);
+}
+
+/* Background utilities */
+.bg-light {
+  background-color: var(--color-bg-light);
+}
+
+.bg-dark {
+  background-color: var(--color-bg-dark);
+}
